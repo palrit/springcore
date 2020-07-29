@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:util="http://www.springframework.org/schema/util" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+           http://www.springframework.org/schema/util 
+           http://www.springframework.org/schema/util/spring-util-3.1.xsd"> 
+<!-- bean definitions here -->
+ 
+ 
+ 	<bean id = "t" class="beans.Test">
+ 		<property name="fruits">
+ 		<util:list list-class="java.util.Vector">
+  			<value>Mango</value>
+ 			<value>guava</value>
+ 			<value>Pineapple</value>
+		</util:list>
+ 		</property>
+ 		
+ 		<property name="drivers">
+ 		<util:set set-class="java.util.TreeSet">
+  			<value>Sehvag</value>
+ 				<value>Sachin</value>
+ 				<value>Sachin</value>
+		</util:set>
+ 		</property>
+ 		
+ 		<property name="cc">
+ 			<util:map map-class="java.util.Hashtable">
+ 				<entry key="India" value="Delhi" />
+ 				<entry key="Canada" value="Ottawa" />
+ 				<entry key="Australia" value="Melbourne" />
+ 			</util:map>
+ 		</property>
+ 
+ 	</bean>	
+ </beans>
