@@ -1,0 +1,29 @@
+As we can pass only one value to a setter method, so if we need to pass more than one value then ir cannot be done by setter method because 
+public void setGender(String gender, String name ) {
+		this.gender = gender;
+		this.name = name;
+	}
+	
+is not a valid setter. and other than this property tag can not be used for the same field twice, the constructor will through parsing exception
+
+<bean id = "t" class="beans.Test" >
+	 	<property name="gender" value="Ms."></property>
+	 </bean>
+	  <bean id = "test" class="beans.Test" >
+	 	<property name="gender" value="Mr."></property>
+	 </bean>
+</beans>
+
+ERror: Configuration problem: Multiple 'property' definitions for property 'gender'
+Offending resource: class path resource [resources/spring.xml]
+Bean 't'
+	-> Property 'gender'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	If there is no constructor then container will create object by using default constructor 
+	And if there is any parameterized constructor in class, then the object cannot be created without using that constructor
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	if the order of value is same as constructor then there is no problem otherwise,then to avoid ambuiguity, use "type" to solve overloading problem 
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+	If the data type is secondary then use "ref" instead of value 
+	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

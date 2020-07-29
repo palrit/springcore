@@ -1,0 +1,16 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+  "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+ <beans>
+ 
+<!--  if the scope is singleton then the object will be created at the time of loading xml document -->
+	 <bean id = "t" class="beans.Test" >
+	 	<constructor-arg value="27" index="1"></constructor-arg>
+	 	<constructor-arg value="Ms" index="0"></constructor-arg>
+	 	<constructor-arg value="ritpal8@gmail.com" index="2"></constructor-arg>
+	 	<!-- <constructor-arg value="28" index="1"></constructor-arg> error 
+ -->	 </bean>
+ 
+ <!-- if the object is prototype then the object will be created at the time of user request -->
+ <!-- 	<bean id = "t" class="beans.Test" scope="prototype"></bean> -->
+ 	
+ </beans>
