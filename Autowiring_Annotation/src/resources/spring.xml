@@ -1,0 +1,61 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+  "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+  <beans>
+  
+  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+  
+ 	<bean id="engine" class="beans.Engine" >
+ 		<property name="modelYear" value="2015"></property>
+ 	</bean>
+ 	
+ 	<bean id="engine1" class="beans.Engine">
+ 		<property name="modelYear" value="2016"></property>
+ 	</bean>
+ 	
+ 	<bean id = "car" class="beans.Car">
+ 		<property name="carName" value="Swift"></property>
+	</bean>	
+ </beans> 
+ 
+ <!-- <beans>
+ 	<bean id="engine" class="beans.Engine" >
+ 		<property name="modelYear" value="2015"></property>
+ 	</bean>
+ 	
+ 	<bean id="engine1" class="beans.Engine" >
+ 		<property name="modelYear" value="2015"></property>
+ 	</bean>
+ 	
+ 	<bean id = "car" class="beans.Car" autowire="byName">
+ 		<property name="carName" value="Swift"></property>
+	</bean>	
+ </beans> -->
+ 
+ <!-- Constructor(byType) -->
+<!--  <beans>
+ 	<bean id="engine" class="beans.Engine" >
+ 		<property name="modelYear" value="2015"></property>
+ 	</bean>
+ 	
+ 	<bean id="engine1" class="beans.Engine" autowire-candidate="false">
+ 		<property name="modelYear" value="2015"></property>
+ 	</bean>
+ 	
+ 	<bean id = "bus" class="beans.Bus" autowire="constructor" >
+	</bean>	
+ </beans> -->
+ 
+ 
+ <!-- autodetect -->
+ <!-- <beans>
+ 	<bean id="engine" class="beans.Engine" >
+ 		<property name="modelYear" value="2016"></property>
+ 	</bean>
+ 	
+ 	<bean id="engine1" class="beans.Engine">
+ 		<property name="modelYear" value="2015"></property>
+ 	</bean>
+ 	
+ 	<bean id = "bus" class="beans.Bus" autowire="autodetect" >
+	</bean>	
+ </beans> -->

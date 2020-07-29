@@ -1,0 +1,7 @@
+@Autowire annotation use byType. byType causes ambiguity
+to resolve it in annotation basis we use @qualifier along with @Autowire
+in qualifier we pass requires bean id @Qualifier("e1")
+to activate these two annotations, need to instanciate one class autowireAnnotaion beanPostProcessor
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+In Annotation based configuration there is no need to write setters and constructors, automatically it will inject dependency by reading private members of the class
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
